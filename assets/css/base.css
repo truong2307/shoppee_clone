@@ -3,6 +3,7 @@
     --black-color: #000;
     --text-color: #333;
     --primary-color: #ee4d2d;
+    --border-color: #dbdbdb;
 }
  
 *{
@@ -31,13 +32,61 @@ html{
     flex-wrap: wrap;
 }
 
-/* Animation */
+/* Modal  */
 
-@keyframes fadeIn {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
+.modal{
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
 }
+
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.modal__body{
+    margin: auto;
+    border-radius: 3px;
+    background-color: var(--white-color);
+    z-index: 1;
+}
+
+/* button */
+.btn{
+    min-width: 142px;
+    height: 36px;
+    border: none;
+    text-decoration: none;
+    font-weight: 500px;
+    font-size: 1.3rem;
+    border-radius: 3px;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    color:var(--text-color)
+}
+
+.btn.btn-normal:hover{
+
+    background-color: rgba(0, 0, 0, 0.05);
+
+}
+
+.btn.btn-primary{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.btn--size-s{
+    height: 32px;
+    font-size: 1.2rem;
+}
+
