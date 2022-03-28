@@ -24,7 +24,7 @@
   /* navbar css */
 
 .header {
-  height: 120px;
+  height: var(--header-height);
   background-image: linear-gradient(0, #fe6532, #f6412e);
 }
 
@@ -146,6 +146,7 @@
 
 .header__notify{
   display: none;
+  z-index: 99;
   position: absolute;
   cursor: text; 
   top: 152%;
@@ -399,3 +400,106 @@
 .auth-form__help-primary{
   color: var(--primary-color);
 }
+
+/* search bar */
+
+
+.header-search{
+  height: var(--search-height);
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  
+}
+
+.header-search__logo-img{
+  align-self: center;
+  width: 150px;
+  cursor: pointer;
+}
+
+.header-search__search-bar{
+  background-color: var(--white-color);
+  border-radius: 2px;
+  height: 39px;
+  margin-left: 45px;
+  width: 100%;
+  flex:1;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.header-search__cart{
+    height: 59px;
+    width: 138px;
+    text-align: center;
+}
+
+.header-search__icon{
+  font-size: 2.9rem;
+  color: var(--white-color);
+  margin-top: 12px;
+}
+
+.header__search-input{
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+  color: var(--text-color);
+  padding: 0 16px;
+  border-radius: 4px;
+}
+
+.btn-search{
+  margin: 2px;
+  outline: none;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 2px;
+  width: 59px;
+  height: 34px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  transition: opacity .3s ease;
+  cursor: pointer;
+}
+
+.btn-search:hover{
+  opacity: .8;
+}
+
+.header__search-history{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--white-color);
+  width: calc(100% - 59px);
+  margin-top: 6px;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.header__search-history-list{
+  padding: 0;
+  margin: 0;
+}
+
+.header__search-history-item{
+  list-style: none;
+  font-size: 1.6rem;
+  padding: 14px 12px;
+}
+
+.header__search-history-item:hover{
+  background-color: #f5f1f0;
+  cursor: pointer;
+}
+
+.header__search-input:focus ~ .header__search-history{
+  display: block;
+}
+
