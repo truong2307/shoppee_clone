@@ -522,7 +522,7 @@ position: relative;
 position: absolute;
 display: none;
 background-color: var(--white-color);
-right: -62%;
+right: -80%;
 top: 60px;
 width: 400px;
 height: 261px;
@@ -533,14 +533,14 @@ animation: fadeIn ease-in 0.2s;
 
 .header__cart-fix-connect{
   display: none;
-  border-width: 20px 25px ;
-  border-style: solid;
-  border-color: transparent transparent var(--white-color) transparent;
-  position: relative;
-  right: -4px;
-  top: -17px;
-  z-index: 5;
-  animation: fadeIn ease-in 0.5s;
+  border-width: 19px 24px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: -10px;
+    top: 23px;
+    z-index: 5;
+    animation: fadeIn ease-in 0.5s;
 }
 
 .header__shopping-cart-img-empty{
