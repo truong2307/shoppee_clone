@@ -1,25 +1,4 @@
-  /* Animation */
 
-  @keyframes fadeIn {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-  }
-
-  @keyframes headerNotifyGrow{
-    from{
-      opacity: 0;
-      transform: scale(0);
-    }
-    to{
-      opacity: 1;
-      transform: scale(1);
-    }
-
-  }
 
   /* navbar css */
 
@@ -60,7 +39,7 @@
 .header__navbar-item,
 .header__navbar-item-link {
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--white-color);
   text-decoration: none;
   font-weight: 300;
@@ -760,6 +739,8 @@ display: none;
   align-items: center;
   font-weight: 400;
   height: 48px;
+  font-size: 1.4rem;
+  transition: .3s ease;
 }
 
 .header__logout{
@@ -768,12 +749,12 @@ display: none;
 
 .header__navbar-option-user::after{
   content: "";
-  border-width: 17px 22px;
-  border-style: solid;
-  border-color: transparent transparent var(--white-color) transparent;
-  position: absolute;
-  right: 35px;
-  top: -34px;
+    border-width: 15px 22px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 35px;
+    top: -30px;
 }
 
 .header__navbar-option-user::before{
@@ -794,4 +775,190 @@ display: none;
 .header__option-user-item:hover{
   opacity: .8;
   background-color: #ebebeb;
+}
+
+
+/* content */
+
+.app__container{
+  background-color: #f5f5f5;
+}
+
+.category{
+  background-color: var(--white-color);
+  border-radius: 2px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.category__heading{
+  font-size: 1.6rem;
+  padding: 14px 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.category__heading-icon{
+  padding-right: 12px;
+}
+
+.category-list{
+  padding-left: 30px;
+}
+
+.category-item{
+  list-style: none;
+  padding-bottom: 14px;
+}
+
+.category-item__active .category-item__link{
+  color: var(--primary-color);
+}
+
+.category-item__active .category-item__link::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -11px;
+  border: 5px solid;
+  transform: translateY(calc(-50% - 1px));
+  border-color: transparent transparent transparent var(--primary-color);
+}
+
+.category-item__link{
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: var(--text-color);
+  position: relative;
+  font-weight: 400;
+  transition: .3s ease;
+  right: 0;
+}
+
+.category-item__link:hover{
+  right: -4px;
+  color:var(--primary-color) ;
+}
+
+
+/* Home filter */
+
+
+.home-filter{
+  display: flex;
+  justify-content: space-between;
+  height: 61px;
+  background-color: #ededed;
+  margin-top: 17px;
+  border-radius: 2px;
+}
+
+.home-filter__list, 
+.home-filter__page{
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+}
+
+.home-filter__list{
+  margin-left: 14px;
+}
+
+.home-filter__page{
+  margin-right: 14px;
+}
+
+.home-filter__item + .home-filter__item{
+  padding-left: 12px;
+}
+
+.home-filter__item{
+  font-size: 1.4rem;
+}
+
+.home-filter__popular,
+.home-filter__new,
+.home-filter__selling{
+  width: 88px;
+  height: 40px;
+  transition: .3s ease;
+}
+
+.home-filter__new,
+.home-filter__selling{
+  background-color: var(--white-color);
+}
+
+.home-filter__price{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  height: 40px;
+  background: var(--white-color);
+  border-radius: 3px;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.home-filter__price:hover .filter__price-sort{
+  display: block;
+ }
+
+.home-filter__price::after{
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  width: 200px;
+  height: 20px;
+  top: 37px;
+  right: 0;
+}
+
+.filter__price-sort{
+  display: none;
+  position: absolute;
+  background-color: var(--white-color);
+  border-radius: 2px;
+  width: 200px;
+  height: 87px;
+  top: 45px;
+  right: -1px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  animation: fadeIn .4s ease;
+}
+
+.filter__price{
+  padding-top: 15px;
+  padding-bottom: 10px;
+  margin-left: 20px;
+  transition: .3s ease;
+}
+
+.filter__price:hover{
+  color: var(--primary-color);
+}
+
+.home-filter_-total{
+  padding-right: 10px;
+}
+
+.home-filter__page-total{
+  color: var(--primary-color);
+}
+
+.home-filter__btn{
+  background-color: var(--white-color);
+  width: 45px;
+  height: 43px;
+  transition: .3s ease;
+}
+
+.home-filter__popular:hover,
+.home-filter__new:hover,
+.home-filter__selling:hover,
+.home-filter__btn:hover{
+  opacity: .7;
 }
