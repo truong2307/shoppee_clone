@@ -508,6 +508,7 @@ height: 261px;
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 border-radius: 2px;
 animation: fadeIn ease-in 0.2s;
+z-index: 4;
 }
 
 .header__cart-fix-connect{
@@ -961,4 +962,107 @@ display: none;
 .home-filter__selling:hover,
 .home-filter__btn:hover{
   opacity: .7;
+}
+
+
+
+
+/* Home list product */
+
+.home-product{
+  margin-top: 12px;
+}
+
+.home-product-item{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-color);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 2px;
+  min-height: 310px;
+  max-height: 310px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.home-product-item:hover{
+  box-shadow: rgba(0, 0, 0, 0.25) 1.95px 1.95px 2.6px;
+  transform: translateY(-1px);
+}
+
+.home-product-item__title{
+  margin-top: 12px;
+  margin-left: 5px;
+  margin-bottom: 0;
+  display: -webkit-box;
+  font-size: 1.3rem;
+  font-weight: 500;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.home-product-item__price{
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  margin-top: 10px;
+
+}
+
+.item-old__unit{
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+.home-item__price-old{
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-decoration: line-through;
+  margin-left: 5px;
+
+
+}
+.home-item__price-new{
+  margin-left: 6px;
+  font-weight: 500;
+  color: var(--primary-color);
+
+
+}
+.home-product-item__react{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+.home-item__react-like{
+  font-size: 1rem;
+}
+
+
+.home-item__react-rating{
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.format-star{
+  color: #ffce3d;
+}
+
+.home-item__sold-amount{
+  font-size: 1.2rem;
+  margin-left: 5px;
+
+}
+.home-item__madeIn{
+  align-self: flex-end;
+  margin-top: 10px;
+  margin-right: 5px;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
 }
